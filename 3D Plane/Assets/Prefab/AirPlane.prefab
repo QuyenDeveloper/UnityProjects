@@ -431,8 +431,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 616664401843858418}
-  - component: {fileID: 4316458281813421909}
-  - component: {fileID: 8147246337044231947}
+  - component: {fileID: 7805909603202350229}
   m_Layer: 0
   m_Name: AirPlane
   m_TagString: Untagged
@@ -459,7 +458,7 @@ Transform:
   - {fileID: 3636432577720348445}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4316458281813421909
+--- !u!114 &7805909603202350229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -468,36 +467,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8447344314787944521}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9b928b5184d63a48842b0ec5b0857de, type: 3}
+  m_Script: {fileID: 11500000, guid: e430cad7d1275b74e875f9e012c4d76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transform: {fileID: 616664401843858418}
-  pos: {x: 5, y: 1, z: 0}
-  speed: 0.1
---- !u!50 &8147246337044231947
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8447344314787944521}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  elevatorUpWard: -18
+  throttle: 30
+  takeOffSpeed: 9
+  takeOffAccelerate: 1.0072
+  isTakeOff: 1
+  takeOffElevator: -3.6
