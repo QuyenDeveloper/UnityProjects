@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: fc91cbb1ea1e3224f891b73ba143332b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - playerPrefab: {fileID: 1096621517491861723, guid: 6e24dc4c2aacf0b409735863323ff37a, type: 3}
+  - npcPrefab: {fileID: 7088183892687350969, guid: 5762dec47549bbd449914e376a3d1b27, type: 3}
+  - floorTile: {fileID: 11400000, guid: 58aefd36671455f4097b32577b606ea9, type: 2}
+  - wallTile: {fileID: 11400000, guid: bea9a804fb63c384eb012c584355c70f, type: 2}
+  - floorMap: {instanceID: 0}
+  - obstacleMap: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
