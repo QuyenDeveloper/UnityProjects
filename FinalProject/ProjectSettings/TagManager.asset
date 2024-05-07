@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Player
+  - Enemy
+  - PlayerFeet
+  - Wall
+  - Floor
+  - Obstical
+  - Bullet
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 1260392105
+    locked: 0
+  - name: Wall
+    uniqueID: 2386494045
+    locked: 0
+  - name: Obtiscal
+    uniqueID: 4251447563
+    locked: 0
+  - name: Player
+    uniqueID: 2330355061
+    locked: 0
+  - name: Bullet
+    uniqueID: 2372217569
+    locked: 0
+  - name: Enemy
+    uniqueID: 1711691457
+    locked: 0

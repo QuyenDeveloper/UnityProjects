@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7877748259435534895
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6456819546066027221}
+  - component: {fileID: 2929541324673564489}
+  - component: {fileID: 4268446490908732143}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6456819546066027221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7877748259435534895}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2929541324673564489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7877748259435534895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db7a4d7114769741b059a3653040f3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHeartsParent: {fileID: 224000013332938072, guid: 645b557fba50efa47b2b7c982f101210, type: 3}
+  playerHeartContainerPrefab: {fileID: 1000013667988280, guid: 645b557fba50efa47b2b7c982f101210, type: 3}
+  playerFighterStats: {fileID: 7277783852474807515, guid: ae38680503ef7304499783ed4634a07b, type: 3}
+--- !u!114 &4268446490908732143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7877748259435534895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2a836d31af738446a744f5feaa5456f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: -2007904966495953824, guid: cb7c0f4715ebaa7438f3ab452a3d2cb9, type: 3}
+  inGameMenu: {fileID: 0}
+  winPanel: {fileID: 0}
+  losePanel: {fileID: 0}
+  backGroundPanel: {fileID: 0}
+  transition: {fileID: 0}
+  transitionTime: 1
+  _audioImg: {fileID: 0}
+  _scoreText: {fileID: 0}
+  reductionInterval: 1
