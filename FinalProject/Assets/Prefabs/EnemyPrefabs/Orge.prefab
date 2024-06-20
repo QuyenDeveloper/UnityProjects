@@ -313,23 +313,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  AddScoreOnKill:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4268446490908732143, guid: b9b215094d182af4ab3f16d6fa676b0c, type: 3}
-        m_TargetAssemblyTypeName: InGameMenu, Assembly-CSharp
-        m_MethodName: set_Score
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   isDead: 0
   _entityAnimator: {fileID: 2533520676863435086}
+  _gameMenu: {fileID: 0}
+  itemPool:
+  - {fileID: 3462837053491488248, guid: 7ff6bcf9743870243bc3871541e465fc, type: 3}
+  - {fileID: 5624477301733749798, guid: 93f6d27183c84394b928625f27ecb667, type: 3}
+  - {fileID: 291865772252937965, guid: 9eca568ca8d17b646a2dd64605027708, type: 3}
+  fadeDuration: 2
   defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!114 &3189879467372128861
 MonoBehaviour:

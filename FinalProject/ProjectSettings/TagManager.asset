@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Floor
   - Obstical
   - Bullet
-  - 
+  - Item
   - 
   - 
   - 
@@ -58,4 +59,7 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 1711691457
+    locked: 0
+  - name: Item
+    uniqueID: 3596642635
     locked: 0

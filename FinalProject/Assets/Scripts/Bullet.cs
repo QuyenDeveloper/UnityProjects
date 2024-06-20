@@ -35,11 +35,11 @@ public class Bullet : MonoBehaviour
         StartCoroutine(NormalProjectileLifeSpan(3, gameObject));
     }
 
-    public void InitBulletPrefab(Vector2 direction, Vector3 pos, int damage, float bulletSpeed)
+    public void InitBulletPrefab(Vector2 direction, Vector3 pos, int damage, float bulletSpeed, int userType)
     {
         bulletCount++;
 
-        if (bulletCount == 5)
+        if (bulletCount == 5 && userType == 1)
         {
             bulletCount = 0;
             BurstProjectile(direction,pos,damage,bulletSpeed);
@@ -49,8 +49,6 @@ public class Bullet : MonoBehaviour
             NormalProjectile(direction, pos, damage, bulletSpeed);
         }
     }
-
-    
 
     private void BurstProjectile(Vector2 direction, Vector3 pos, int damage, float projectileSpeed)
     {

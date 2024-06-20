@@ -16,7 +16,7 @@ public class AudioHandler : MonoBehaviour
     public void TakeDamgeAudio(AudioSource audioSource)
     {
         if (!takeDamageAC) return;
-        audioSource.PlayOneShot(takeDamageAC);
+        attackingAS.PlayOneShot(takeDamageAC);
     }
 
     public void AttackAudio()
@@ -43,11 +43,7 @@ public class AudioHandler : MonoBehaviour
 
     public void DeathAudio()
     {
-        if (!deathAC)
-        {
-            Debug.Log("DeathAC return");
-            return;
-        }
+        if (!deathAC) return;
         movingAS.PlayOneShot(deathAC);
     }
 }

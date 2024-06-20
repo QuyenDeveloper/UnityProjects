@@ -11,6 +11,7 @@ public class RangeWeaponParent : MonoBehaviour
     public bool IsAttacking { get; private set; }
     public float radius;
     public float bulletSpeed = 3f;
+    public int userType = 0;
 
 
     public SpriteRenderer charaterRenderer, weaponRenderer;
@@ -60,7 +61,7 @@ public class RangeWeaponParent : MonoBehaviour
     {
         if (attackBlocked) return;
         weaponAnimator.SetTrigger("Attack");
-        bullet.InitBulletPrefab((PointerPosition - (Vector2)transform.position).normalized, transform.position, fightStats.AttackDamage, bulletSpeed);
+        bullet.InitBulletPrefab((PointerPosition - (Vector2)transform.position).normalized, transform.position, fightStats.AttackDamage, bulletSpeed, userType);
         IsAttacking = true;
         attackBlocked = true;
         audioHandler.AttackAudio();

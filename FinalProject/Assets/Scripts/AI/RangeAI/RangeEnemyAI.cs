@@ -63,6 +63,11 @@ public class RangeEnemyAI : MonoBehaviour
                 StartCoroutine(ChaseAndAttack());
             }
         }
+        else if (aiData.GetTargetsCount() > 0)
+        {
+            //Target acquisition logic
+            aiData.currentTarget = aiData.targets[0];
+        }
         OnMovementInput?.Invoke(movementInput);
     }
 

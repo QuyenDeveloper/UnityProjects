@@ -1052,6 +1052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 0
   bulletSpeed: 2
+  userType: 1
   charaterRenderer: {fileID: 2999297236520554832}
   weaponRenderer: {fileID: 69925688520158181}
   weaponAnimator: {fileID: 4558996944034765960}

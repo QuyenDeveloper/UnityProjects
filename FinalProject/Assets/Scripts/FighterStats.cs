@@ -9,7 +9,7 @@ public class FighterStats : MonoBehaviour
     public OnHealthChangedDelegate onHealthChangedCallback;
 
     [SerializeField]
-    private int  maxHealth, totalMaxHealth;
+    private float  maxHealth, totalMaxHealth;
     [SerializeField]
     private int armor, attackDamage, scoreGainOnKill;
     [SerializeField]
@@ -21,6 +21,7 @@ public class FighterStats : MonoBehaviour
     private bool isDead = false;
     public Animator _entityAnimator;
     [SerializeField] private InGameMenu _gameMenu;
+    [SerializeField] private GameObject[] itemPool;
 
     public float fadeDuration = 2f; 
     private Renderer objectRenderer;
@@ -36,8 +37,8 @@ public class FighterStats : MonoBehaviour
     public int AttackDamage { get => attackDamage; set => attackDamage = value; }
     public float AttackSpeed { get => attackSpeed; set => attackSpeed = value; }
     public float CurrentHealth { get => currentHealth; set => currentHealth = value; }
-    public int MaxHealth { get => maxHealth; set => maxHealth = value; }
-    public int TotalMaxHealth { get => totalMaxHealth; set => totalMaxHealth = value; }
+    public float MaxHealth { get => maxHealth; set => maxHealth = value; }
+    public float TotalMaxHealth { get => totalMaxHealth; set => totalMaxHealth = value; }
     public int ScoreGainOnKill { get => scoreGainOnKill; set => scoreGainOnKill = value; }
 
     public Material defaultMaterial;
@@ -60,12 +61,11 @@ public class FighterStats : MonoBehaviour
             }
             else
             {
-                // Fading completed
                 Destroy(gameObject);
             }
         }
     }
-    public void GetHit(int amount, GameObject sender)
+    public void GetHit(float amount, GameObject sender)
     {
         if (isDead) return;
         if (sender.layer == gameObject.layer) return;
@@ -92,21 +92,20 @@ public class FighterStats : MonoBehaviour
     }
 
 
-    public void Heal(int health)
+    public void Heal(float health)
     {
         currentHealth += health;
         ClampHealth();
     }
 
-    public void AddHealth()
+    public void AddHealth(float increaseAmount)
     {
         if (maxHealth < totalMaxHealth)
         {
-            maxHealth += 1;
-            currentHealth = maxHealth;
-
-            if (onHealthChangedCallback != null)
-                onHealthChangedCallback.Invoke();
+            maxHealth += increaseAmount;
+            maxHealth = Mathf.Clamp(maxHealth, 0, totalMaxHealth);
+            currentHealth += increaseAmount;
+            ClampHealth();
         }
     }
 
@@ -134,5 +133,45 @@ public class FighterStats : MonoBehaviour
         targetColor = new Color(originalColor.r, originalColor.g, originalColor.b, 0f);
         currentFadeTime = 0f;
         isFading = true;
+        GameObject a = GetRandomItemOrNothing(0.7f);
+        if(a != null) Instantiate(a, transform.position, Quaternion.identity);
+    }
+
+    private GameObject GetRandomItem()
+    {
+        int totalWeight = 0;
+        foreach (var weightedItem in itemPool)
+        {
+            Item i = weightedItem.GetComponent<Item>();
+            totalWeight += i.ItemWeight;
+        }
+
+        int randomValue = Random.Range(0, totalWeight);
+
+        int cumulativeWeight = 0;
+        foreach (var weightedItem in itemPool)
+        {
+            Item i = weightedItem.GetComponent<Item>();
+            cumulativeWeight += i.ItemWeight;
+            if (randomValue < cumulativeWeight)
+            {
+                i.GameMenu = _gameMenu;
+                return weightedItem;
+            }
+        }
+
+        return null;
+    }
+
+    public GameObject GetRandomItemOrNothing(float probabilityOfNothing)
+    {
+        if (Random.value < probabilityOfNothing)
+        {
+            return null;
+        }
+        else
+        {
+            return GetRandomItem();
+        }
     }
 }

@@ -12,8 +12,6 @@ public class RangeFighter : MonoBehaviour
     private MoveEntity moveEntity;
     public Vector2 PointerDirection { get => pointerDirection; set => pointerDirection = value; }
     public Vector2 MovementDirection { get => movementDirection; set => movementDirection = value; }
-
-
     private void Awake()
     {
         rangeWeaponParent = GetComponentInChildren<RangeWeaponParent>();
